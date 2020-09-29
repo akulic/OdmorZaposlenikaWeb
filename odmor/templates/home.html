@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Rb</th>
+            <th scope="col">Ime</th>
+            <th scope="col">Prezime</th>
+            <th scope="col">Ukupno dana</th>
+            <th scope="col">Iskorišteno</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zaposlenik in zaposlenici %}
+            <tr>
+                <td>{{ zaposlenik.rb }}</td>
+                <td>{{ zaposlenik.ime }}</td>
+                <td>{{ zaposlenik.prezime }}</td>
+                <td>{{ zaposlenik.ukupno_dana }}</td>
+                <td>{{ zaposlenik.iskoristeno }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
+
